@@ -1,0 +1,43 @@
+<template name="editmodal">
+ <div class="modal fade"  tabindex='-1'>
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h4 class="modal-title">Editar</h4>
+                </div>
+                <form>
+                    <div class="modal-body form group">
+                        <label for="newPalavra">Palavra</label>
+                        <input type="text" id="newPalavra" class="form-control" value="{{palavra}}">
+
+                        <label for="newSignificado">Significado</label>
+                        <input type="text" id="newSignificado" class="form-control" value="{{significado}}">
+                        <br>
+                         <div class="box-uploader">
+                            Selecione imagem para upload (<b>JPG only</b>) 
+                            <input type="file" id="fileopen" class="fileUploaderNew" accept="image/*">
+                         </div>
+                        <br>
+                        <div id="divnewimagem" style="text-align: center">
+                            <div class="">
+                                <img  id="newimg" src="{{this.url}}" width="225px" height="225px">
+                           </div>
+                        </div>
+
+                    </div>
+                    <br>
+                    
+                    <div>
+                        <button class="btn btn-success btn-block btneditar" type="submit">Editar</button>
+                    </div>
+                </form>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+ </template>

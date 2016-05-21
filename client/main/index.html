@@ -1,0 +1,43 @@
+<head>
+ 	 <title>Dicionarius</title>
+    <link rel="icon" href="img/dicionarius-icon.png" type="image/png">
+</head>
+
+<body>
+	<header class="container">
+		<nav class="navbar navbar-default">
+			<div class="navbar-header">
+			<img src="img/dicionarius-logo.png" >
+				
+			</div>
+			<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav navbar-right">
+					{{> loginButtons}}
+				</ul>
+			</div>
+		</nav>
+	</header>
+
+	<main class="container">
+	{{#if currentUser}}
+		<div style="width: 100%; overflow: hidden;">
+    		<div style="width: 600px; float: left;"> 
+				{{> novo}}
+    		</div>
+
+    		<div style="margin-left: 620px;"> 
+    			{{>chat}}	
+    		</div>
+		</div>
+
+		<br>
+		<hr>
+		{{> lista}}
+
+	{{else}}
+		<center><img src="img/login-denied.jpg" title="VAI LOGO ';..;'" ></center>
+	{{/if}}
+
+	</main>
+
+</body>

@@ -1,0 +1,66 @@
+<template name="novo">
+	
+<div class="row">
+	<div class="col-xs-12">
+		<form>
+			<div class="form-group">
+				<label for="palavra">Palavra</label>
+				<input type="text" id="palavra" class="form-control" placeholder="Sua palavreza aqui !" required/>
+
+				<br/>
+				
+				<label for="significado">Significado</label>
+				<input type="text" id="significado" class="form-control" placeholder="Descriciones <--- " required/>
+				<br>
+				<label>Photo</label>
+				<div>	
+					{{> dropZone}}
+					<br>
+					<div id="divImagem">
+      	  				<div class="image">
+					 		<img  id="imgtag" src="" width="225px" height="225px">
+					   </div>
+      				</div>
+					
+				</div>
+
+				<br/>
+				<div class="form-group">
+					<button class="btn btn-success btn-block inclui">Incluir !</button>
+				</div>
+
+			</div>
+
+		</form>
+
+	</div>
+
+</div>
+</template>
+
+<template name="dropZone">
+  <div class="box-uploader">
+    Selecione imagem para upload (<b>JPG only</b>) 
+    <input type="file" id="fileopen" class="fileUploader" accept="image/*">
+  </div>
+</template>
+
+<template name="fileTable">
+
+  {{#if file.url }}
+       <input type="hidden" class="imgid" value="{{file._id}}">
+       <div>
+       <div class="thumbnail">
+      	  <div class="image">
+	         
+	          <!--   <img  id="imgtag" src="{{file.url}}" width="225px" height="225px"> -->
+	        
+      	  </div>
+      </div>
+      <td>
+        <input type="button" class="remove" value="x">
+      </td>
+      </div>
+  {{/if}} 
+
+</template>

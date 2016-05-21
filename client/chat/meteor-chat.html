@@ -1,0 +1,38 @@
+<template name="chat">
+        {{#if currentUser}}
+        <div class="row" style="margin: 3px; margin-bottom: -20px;">
+            <div class="span8 well">
+                {{> messages}}
+                <br>
+                {{> input}}
+            </div>
+        </div>
+        {{else}}
+        <div class="hero-unit">
+            <h1>Welcome to Conversário</h1>
+            <p>Please login!</p>
+        </div>
+        {{/if}}
+</template>
+
+<template name="input">
+    <input type="text" id="msg" placeholder="fala meu filho..." style="width: 72%; margin-bottom: 0px">
+    <input type="button" value="Send message" class="btn btn-primary sendMsg">
+</template>
+
+<template name="messages">
+    <h4><strong>Conversário</strong><img src="img/mouth.png" style="width: 45px; height: 45px"></h4>
+    <div id="messages" class="messageDiv" style="background-color: #ffffff; border: 1px solid darkgray; max-height: 150px; overflow: auto">
+        {{#each messages}}
+            {{> message}}
+        {{/each}}
+    </div>
+</template>
+
+<template name="message">
+    <p><span style="font-size: 0.7em; color: darkgray">({{timestamp}})</span> <br> <span style="font-size:0.8em;">{{user}}</span> : <i>{{msg}}</i></p>
+</template>
+
+<template name="room">
+    <li style="cursor: pointer; {{roomstyle}}">{{roomname}}</li>
+</template>
