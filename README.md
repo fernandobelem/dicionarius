@@ -2,7 +2,7 @@
 
 Meteor Application 
 
-Application developed to test learn a little about MeteorJS, which is an amazing language.
+Application developed to test and learn a little about MeteorJS, which is an amazing language.
 
 My goal was to test some of the event orientation tech embed within the language which I've accomplished developing a simple CRUD of text and image upload.
 
